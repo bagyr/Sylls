@@ -25,6 +25,7 @@ pattern = [5, 7, 5]
 def findPattern(sentences, pattern):
     ns = 0
     out = []
+    haiku = []
     for i in sent:
         _pattern = pattern[:]
         maxsyl = _pattern.pop()
@@ -50,6 +51,10 @@ text = f.read()
 sent = sent_detector.tokenize(text.strip())
 sent = [x.strip() for x in sent[:]]
 print len(sent)
+haikus = findPattern(sent, pattern)
+haikus2 = findPattern(sent, [17])
+print len(haikus)
+print len(haikus2)
 # ns = 0
 # out = []
 # haiku = 0
