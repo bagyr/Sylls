@@ -1,0 +1,566 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"fontSize"
+			],
+			[
+				"font",
+				"fontSizes"
+			],
+			[
+				"clo",
+				"clockFont"
+			],
+			[
+				"main",
+				"mainFontSize"
+			],
+			[
+				"he",
+				"headerOffset"
+			],
+			[
+				"li",
+				"lines"
+			],
+			[
+				"cer",
+				"centered"
+			],
+			[
+				"cen",
+				"centr"
+			],
+			[
+				"ce",
+				"centered"
+			],
+			[
+				"bli",
+				"blitToWithOffset"
+			],
+			[
+				"cel",
+				"cell"
+			],
+			[
+				"fil",
+				"fill"
+			],
+			[
+				"tab",
+				"tableRenderer"
+			],
+			[
+				"su",
+				"Surface"
+			],
+			[
+				"ren",
+				"render"
+			],
+			[
+				"max",
+				"maxWidth"
+			],
+			[
+				"ba",
+				"backcolor"
+			],
+			[
+				"Bl",
+				"blitToWithOffset"
+			],
+			[
+				"ta",
+				"tableRenderer"
+			],
+			[
+				"Ta",
+				"TableRenderer"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"win",
+				"windowSize"
+			],
+			[
+				"set",
+				"setTime"
+			],
+			[
+				"Re",
+				"Renderer"
+			],
+			[
+				"the",
+				"theme"
+			],
+			[
+				"th",
+				"theme"
+			],
+			[
+				"redi",
+				"redisPort"
+			],
+			[
+				"redis",
+				"redisHost"
+			],
+			[
+				"con",
+				"connPool"
+			],
+			[
+				"conn",
+				"connPool"
+			],
+			[
+				"lin",
+				"lineWidth"
+			],
+			[
+				"y",
+				"yspeed"
+			],
+			[
+				"an",
+				"angSpeed"
+			],
+			[
+				"ang",
+				"angle"
+			],
+			[
+				"a",
+				"accel"
+			],
+			[
+				"fu",
+				"function	function"
+			],
+			[
+				"x",
+				"xspeed"
+			],
+			[
+				"e",
+				"event"
+			],
+			[
+				"el",
+				"elif"
+			],
+			[
+				"mai",
+				"mainFontSize"
+			],
+			[
+				"atr",
+				"attrs"
+			],
+			[
+				"att",
+				"attrs"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"ra",
+				"raise"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"my_",
+				"my_sec_pat"
+			],
+			[
+				"secon",
+				"seconds"
+			],
+			[
+				"red",
+				"redisWorker"
+			],
+			[
+				"lo",
+				"loads"
+			],
+			[
+				"ex",
+				"expose"
+			],
+			[
+				"htt",
+				"httpPage"
+			],
+			[
+				"ch",
+				"cherrypy"
+			],
+			[
+				"__",
+				"__init__"
+			],
+			[
+				"ma",
+				"margins"
+			],
+			[
+				"line",
+				"lineStart"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"al",
+				"alter"
+			],
+			[
+				"tr",
+				"trainHead"
+			],
+			[
+				"tra",
+				"trains"
+			],
+			[
+				"Z",
+				"Zeit"
+			],
+			[
+				"ro",
+				"rows"
+			],
+			[
+				"u",
+				"utf8"
+			],
+			[
+				"get_",
+				"get_width"
+			],
+			[
+				"fo",
+				"forecolor"
+			],
+			[
+				"get",
+				"get_height"
+			],
+			[
+				"row",
+				"rowRender"
+			],
+			[
+				"du",
+				"debugPrint"
+			],
+			[
+				"pa",
+				"packetType"
+			],
+			[
+				"pac",
+				"packetType"
+			],
+			[
+				"de",
+				"debugPrint"
+			],
+			[
+				"_s",
+				"_setNotNone"
+			],
+			[
+				"tri",
+				"train"
+			],
+			[
+				"s",
+				"startswith"
+			],
+			[
+				"time",
+				"timePacket"
+			],
+			[
+				"tim",
+				"timePacket"
+			],
+			[
+				"t",
+				"timeNow"
+			],
+			[
+				"da",
+				"dateTime"
+			],
+			[
+				"sql",
+				"sqlite3"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 170.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/db/asd",
+		"/F/db/{0,1232,1256,0,0,0,1294,1349,0,0,0,0,0,4,4,",
+		"/F/db/atf fpl",
+		"/F/Python27/tablo/themes/hd.ini",
+		"/F/Python27/tablo/server2.ini",
+		"/F/Python27/tablo/dispPrev.py",
+		"/f/python27/tablo/.git/COMMIT_EDITMSG",
+		"/F/Python27/tablo/themes/900p.ini",
+		"/F/Python27/tablo/themes/720.ini",
+		"/F/Python27/tablo/themes/spider.ini",
+		"/F/Python27/tablo/webClient.py",
+		"/F/Python27/tablo/tabloClient.py",
+		"/F/Python27/tablo/templates/trains.html",
+		"/F/Python27/tablo/themes/hope.ini",
+		"/F/Python27/tablo/tablo2.ini",
+		"/F/Python27/tablo/tablo1.ini",
+		"/F/Python27/tablo/static/css/bootstrap.css",
+		"/C/Users/arubtsov/Downloads/simpleserv.py",
+		"/F/Python27/tablo/web.ini",
+		"/C/Users/arubtsov/Downloads/pa1-spamlord-v1/python/SpamLord.py",
+		"/F/Python27/tablo/themes/default.ini",
+		"/F/Python27/tablo/templates/base.html",
+		"/C/Users/arubtsov/Downloads/jar.erl",
+		"/F/Python27/tablo/server1.ini",
+		"/F/Python27/redisTest/python_redis_subscribe.py",
+		"/F/Python27/redisTest/python_redis_publish.py",
+		"/F/Python27/redisTest/python_redis_pubsub.py",
+		"/F/Python27/libTablo.py",
+		"/F/Python27/tabloClient.py",
+		"/F/Python27/tableRender.py",
+		"/F/Python27/libTabloTest.py",
+		"/F/Python27/libTablo/__init__.py",
+		"/F/Python27/tcpTest.py",
+		"/F/Python27/child.py",
+		"/C/Users/arubtsov/Documents/ActiveX_Live_Pack_V_1_2_2_30/cpp/ActiveX.html",
+		"/C/Program Files/Wireshark/init.lua",
+		"/C/Users/arubtsov/Documents/david.lua",
+		"/F/Python27/libEwioTest.py",
+		"/F/Python27/sd.txt",
+		"/F/Python27/libTablo.pyc",
+		"/F/Python27/libTablo/packetType.py",
+		"/C/Users/arubtsov/Documents/Visual Studio 2010/Projects/BIP_Viewer/BIP_Viewer/BIP_Viewer/ActiveX/install.cmd",
+		"/C/Users/arubtsov/Downloads/diehard.c",
+		"/C/Users/arubtsov/Downloads/cut_field_fast.cpp",
+		"/C/Users/arubtsov/documents/visual studio 2010/Projects/David2/.git/COMMIT_EDITMSG",
+		"/C/Users/arubtsov/Downloads/crib.pl",
+		"/C/Users/arubtsov/Desktop/dump.txt",
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/F/Program Files (x86)/Git/Git Bash.vbs"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fill",
+			"header",
+			"encode",
+			"char",
+			"decode",
+			"31",
+			"header",
+			"50",
+			"setY",
+			"dyn",
+			"70",
+			"theme.li",
+			"-con",
+			"lines",
+			"maxWidth",
+			"train",
+			"Hinweis",
+			"[ ]{2,}",
+			"//",
+			"/.",
+			"////",
+			"//",
+			"[ ]{2,}",
+			"  ",
+			"tag",
+			"self.trains",
+			"this",
+			"blitToWithOffset",
+			"config",
+			"columnsPerc",
+			"tableRow",
+			"theme",
+			"config",
+			"start",
+			"conne",
+			"conn",
+			"Redis",
+			"stop",
+			"config.margins[0]",
+			"font",
+			":",
+			"5",
+			"train",
+			"parserTest",
+			")",
+			"PORT",
+			"data",
+			"navigate",
+			"search",
+			"navigate",
+			"36",
+			"naviga",
+			"pelco"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" ",
+			"/s",
+			"//\\r\\n",
+			"////\\r\\n",
+			"//\\r\\n",
+			"//\\r",
+			" ",
+			"self",
+			"self.blitToWithOffset",
+			"this.theme",
+			"rowSpec",
+			"self.theme",
+			"theme",
+			" [] = ",
+			"temp\ntemp"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true
+}
