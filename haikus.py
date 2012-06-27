@@ -1,16 +1,23 @@
-import curses
+# import curses
 from curses.ascii import isdigit
 import nltk
 from nltk.corpus import cmudict
 import nltk.data
+import logging
+import sys
+
+logging.basicConfig(stream=sys.stdout)
+log = logging.getLogger("Syllables")
+log.setLevel(logging.INFO)
 
 sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
 d = cmudict.dict()
 
+
 def nsyl(word):
     try:
-        out = [len(list(y 
+        out = [len(list(y
         for y in x if isdigit(y[-1])))
             for x in d[word.lower()]]
     except:
@@ -22,39 +29,52 @@ sylls = 17
 
 pattern = [5, 7, 5]
 
+
+# TODO: Make it fucking work!
 def findPattern(sentences, pattern):
     ns = 0
     out = []
     haiku = []
-    for i in sent:
+    for i in sentences:
         _pattern = pattern[:]
         maxsyl = _pattern.pop()
         tokens = nltk.word_tokenize(i)
-        for j in tokens:
-            ns += max(nsyl(j))
-            haiku.append(j)
-            if ns > maxsyl or len(_pattern) == 0:
+        for word in tokens:
+            ns += max(nsyl(word))
+            haiku.append(word)
+            if ns > maxsyl:
+                log.info('Overflow %d/%d %s\n%s\n', ns, maxsyl, word, i)
                 haiku = []
                 ns = 0
+                out = []
                 break
             elif ns == maxsyl:
-                ns = 0
                 maxsyl = _pattern.pop()
+                ns = 0
+                log.info('allmost %d %s\n%s', maxsyl, word, i)
+            elif len(_pattern) == 0:
+                log.info('pattern ends %s\n%s\n', word, i)
+                break
+        out.append(' '.join(haiku))
         ns = 0
         haiku = []
-        out.append(haiku)
+    log.info('return')
     return out
 
 
-f = open('./conv2.txt')
-text = f.read()
-sent = sent_detector.tokenize(text.strip())
-sent = [x.strip() for x in sent[:]]
-print len(sent)
-haikus = findPattern(sent, pattern)
-haikus2 = findPattern(sent, [17])
-print len(haikus)
-print len(haikus2)
+# f = open('./conv2.txt')
+# text = f.read()
+# sent = sent_detector.tokenize(text.strip())
+# sent = [x.strip() for x in sent[:]]
+# print len(sent)
+# haikus = findPattern(sent, pattern)
+# haikus2 = findPattern(sent, [17])
+# print len(haikus)
+# print haikus[0:10]
+# print len(haikus2)
+# print haikus2[0:10]
+print 'found: ', findPattern(
+    ['za cava qawa sadafa gajasa rata paca gata'], [6, 3, 9])
 # ns = 0
 # out = []
 # haiku = 0
@@ -75,4 +95,3 @@ print len(haikus2)
 #     ns = 0
 #     out = []
 # print 'total', haiku
-
