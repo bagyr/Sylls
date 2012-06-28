@@ -43,35 +43,44 @@ def findPattern(sentences, pattern):
     haiku = []
     for i in sentences:
         _pattern = pattern[:]
-        maxsyl = _pattern.pop()
         tokens = nltk.word_tokenize(i)
-        for word in tokens:
-            log.info('%s | %s' % (word, ' '.join(haiku)))
-            ns += max(nsyl(word))
-            haiku.append(word)
-            if ns > maxsyl:
-                log.info('Overflow %d/%d %s\n%s\n', ns, maxsyl, word, i)
-                haiku = []
-                ns = 0
-                # out = []
-                break
-            elif ns == maxsyl:
-                if len(_pattern) != 0:
-                    maxsyl = _pattern.pop()
-                else:
-                    haiku = []
-                    ns = 0
-                    # out = []
-                ns = 0
-                log.info('allmost %d %s\n%s', maxsyl, word, i)
-            # elif len(_pattern) == 0:
-                # log.info('pattern ends %s\n%s\n', word, i)
-                # break
-        if haiku != []:
-            out.append(' '.join(haiku))
+        sylls = map(lambda x: max(nsyl(x)), tokens)
         ns = 0
-        haiku = []
-    log.info('return')
+        maxS = _pattern.pop()
+        for j in xrange(len(sylls)):
+            ns += sylls[j]
+            if ns > maxS:
+                break
+            if ns == maxS:
+                if j != len(sylls) and len(_pattern) == 0:
+                    break
+                elif j == len(sylls):
+                    out.append(' '.join(i))
+        # for word in tokens:
+    #         log.info('%s | %s | %d', word, ' '.join(haiku), ns)
+    #         ns += max(nsyl(word))
+    #         haiku.append(word)
+    #         if ns > maxsyl:
+    #             log.info('Overflow %d/%d %s\n%s\n', ns, maxsyl, word, i)
+    #             haiku = []
+    #             ns = 0
+    #             # out = []
+    #             break
+    #         elif ns == maxsyl:
+    #             log.info('allmost %d %s\n%s', maxsyl, word, i)
+    #             if len(_pattern) != 0:
+    #                 maxsyl = _pattern.pop()
+    #             else:
+    #                 haiku = []
+    #                 ns = 0
+    #                 # out = []
+    #             ns = 0
+    #         # elif len(_pattern) == 0:
+    #             # log.info('pattern ends %s\n%s\n', word, i)
+    #             # break
+    #     ns = 0
+    #     haiku = []
+    # log.info('return')
     return out
 
 
