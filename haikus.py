@@ -1,5 +1,11 @@
 # import curses
-from curses.ascii import isdigit
+try:
+    from curses.ascii import isdigit
+except:
+    import re
+    def isdigit(c):
+        return re.match(r'[0-9]', c) is not None
+
 import nltk
 from nltk.corpus import cmudict
 import nltk.data
@@ -46,16 +52,22 @@ def findPattern(sentences, pattern):
                 log.info('Overflow %d/%d %s\n%s\n', ns, maxsyl, word, i)
                 haiku = []
                 ns = 0
-                out = []
+                # out = []
                 break
             elif ns == maxsyl:
-                maxsyl = _pattern.pop()
+                if len(_pattern) != 0:
+                    maxsyl = _pattern.pop()
+                else:
+                    haiku = []
+                    ns = 0
+                    # out = []
                 ns = 0
                 log.info('allmost %d %s\n%s', maxsyl, word, i)
-            elif len(_pattern) == 0:
-                log.info('pattern ends %s\n%s\n', word, i)
-                break
-        out.append(' '.join(haiku))
+            # elif len(_pattern) == 0:
+                # log.info('pattern ends %s\n%s\n', word, i)
+                # break
+        if haiku != []:
+            out.append(' '.join(haiku))
         ns = 0
         haiku = []
     log.info('return')

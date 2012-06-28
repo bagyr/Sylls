@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"max",
+				"maxsyl"
+			],
+			[
+				"_",
+				"_pattern"
+			],
+			[
 				"fon",
 				"fontSize"
 			],
@@ -62,10 +70,6 @@
 			[
 				"ren",
 				"render"
-			],
-			[
-				"max",
-				"maxWidth"
 			],
 			[
 				"ba",
@@ -319,6 +323,25 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "readme.md",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "import curses\nfrom curses.ascii import isdigit\nimport nltk\nfrom nltk.corpus import cmudict\nimport nltk.data\n\nsent_detector = nltk.data.load('tokenizers/punkt/english.pickle')\n\nd = cmudict.dict()\n\ndef nsyl(word):\n    try:\n        out = [len(list(y \n        for y in x if isdigit(y[-1])))\n            for x in d[word.lower()]]\n    except:\n        out = [0]\n    finally:\n        return out\n\nsylls = 17\n\npattern = [5, 7, 5]\n\ndef findPattern(sentences, pattern):\n    ns = 0\n    out = []\n    for i in sent:\n        _pattern = pattern[:]\n        maxsyl = _pattern.pop()\n        tokens = nltk.word_tokenize(i)\n        for j in tokens:\n            ns += max(nsyl(j))\n            haiku.append(j)\n            if ns > maxsyl or len(_pattern) == 0:\n                haiku = []\n                ns = 0\n                break\n            elif ns == maxsyl:\n                ns = 0\n                maxsyl = _pattern.pop()\n        ns = 0\n        haiku = []\n        out.append(haiku)\n    return out\n\n\nf = open('./conv2.txt')\ntext = f.read()\nsent = sent_detector.tokenize(text.strip())\nsent = [x.strip() for x in sent[:]]\nprint len(sent)\n# ns = 0\n# out = []\n# haiku = 0\n# for i in sent:\n#     tokens = nltk.word_tokenize(i)\n#     ns = 0\n#     out = []\n#     for j in tokens:\n#         ns += max(nsyl(j))\n#         out.append(j)\n#         if ns > sylls:\n#             ns = 0\n#             out = []\n#             break\n#     if ns == sylls:\n#         haiku += 1\n#         print ' '.join(out)\n#     ns = 0\n#     out = []\n# print 'total', haiku\n\n",
+			"file": "test_nltk.py",
+			"file_size": 1519,
+			"file_write_time": 129852802495813846,
+			"settings":
+			{
+				"buffer_size": 1519,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -344,6 +367,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/arubtsov/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/F/db/asd",
 		"/F/db/{0,1232,1256,0,0,0,1294,1349,0,0,0,0,0,4,4,",
 		"/F/db/atf fpl",
@@ -415,6 +439,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ns = 0\n# out = []\n# haiku = 0\n# for i in sent:\n#     tokens = nltk.word_tokenize(i)\n#     ns = 0\n#     out = []\n#     for j in tokens:\n#         ns += max(nsyl(j))\n#         out.append(j)\n#         if ns > sylls:\n#             ns = 0\n#             out = []\n#             break\n#     if ns == sylls:\n#         haiku += 1\n#         print ' '.join(out)\n#     ns = 0\n#     out = []\n# print 'total', haiku\n\n",
+			"hokku",
+			"suits",
+			"out",
+			"def findPattern(sentences, pattern):\n    ns = 0\n    out = []\n    for i in sent:\n        _pattern = pattern[:]\n        maxsyl = _pattern.pop()\n        tokens = nltk.word_tokenize(i)\n        for j in tokens:\n            ns += max(nsyl(j))\n            out.append(j)\n            if ns > maxsyl or len(_pattern) == 0:\n                out = []\n                ns = 0\n                break\n            elif ns == maxsyl:\n                ns = 0\n                maxsyl = _pattern.pop()\n        ns = 0\n        out = []\n",
+			"out",
 			"fill",
 			"header",
 			"encode",
@@ -500,8 +530,63 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "readme.md",
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "test_nltk.py",
+					"settings":
+					{
+						"buffer_size": 1519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 129.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
