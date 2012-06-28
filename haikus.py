@@ -46,6 +46,7 @@ def findPattern(sentences, pattern):
         maxsyl = _pattern.pop()
         tokens = nltk.word_tokenize(i)
         for word in tokens:
+            log.info('%s | %s' % (word, ' '.join(haiku)))
             ns += max(nsyl(word))
             haiku.append(word)
             if ns > maxsyl:
@@ -85,8 +86,8 @@ def findPattern(sentences, pattern):
 # print haikus[0:10]
 # print len(haikus2)
 # print haikus2[0:10]
-print 'found: ', findPattern(
-    ['za cava qawa sadafa gajasa rata paca gata'], [6, 3, 9])
+# print 'found: ', findPattern(
+    # ['za cava qawa sadafa gajasa rata paca gata'], [6, 3, 9])
 # ns = 0
 # out = []
 # haiku = 0

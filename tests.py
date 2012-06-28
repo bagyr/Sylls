@@ -1,17 +1,17 @@
 import unittest
+import logging
 from haikus import findPattern
-
 
 class MainSequence(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.testString = ['za cava qawa sadafa gajasa rata paca gata']
 
-    def testFind(self):
-        testString = ['za cava qawa sadafa gajasa rata paca gata']
-        found1 = findPattern(testString, [17])
-        found2 = findPattern(testString, [5, 7, 5])
-        print found1, found2
+    def testSimpleHaiku(self):
+        print 'Simple: ', findPattern(self.testString, [18])
+        
+    def testComplexHaiku(self):
+        print 'Complex: ', findPattern(self.testString, [5, 7, 5])
 
 if __name__ == '__main__':
     unittest.main()
