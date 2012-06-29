@@ -14,7 +14,7 @@ import sys
 
 logging.basicConfig(stream=sys.stdout)
 log = logging.getLogger("Syllables")
-log.setLevel(logging.DEBUG)
+log.setLevel(logging.CRITICAL)
 
 sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
@@ -74,74 +74,3 @@ def findPattern(sentences, pattern):
                         maxS = 0
                         break
     return out
-
-        # for j in xrange(len(sylls)):
-        #     ns += sylls[j]
-        #     if ns > maxS:
-        #         break
-        #     if ns == maxS:
-        #         if j != len(sylls) and len(_pattern) == 0:
-        #             break
-        #         elif j == len(sylls):
-        #             out.append(' '.join(i))
-        # for word in tokens:
-    #         log.info('%s | %s | %d', word, ' '.join(haiku), ns)
-    #         ns += max(nsyl(word))
-    #         haiku.append(word)
-    #         if ns > maxsyl:
-    #             log.info('Overflow %d/%d %s\n%s\n', ns, maxsyl, word, i)
-    #             haiku = []
-    #             ns = 0
-    #             # out = []
-    #             break
-    #         elif ns == maxsyl:
-    #             log.info('allmost %d %s\n%s', maxsyl, word, i)
-    #             if len(_pattern) != 0:
-    #                 maxsyl = _pattern.pop()
-    #             else:
-    #                 haiku = []
-    #                 ns = 0
-    #                 # out = []
-    #             ns = 0
-    #         # elif len(_pattern) == 0:
-    #             # log.info('pattern ends %s\n%s\n', word, i)
-    #             # break
-    #     ns = 0
-    #     haiku = []
-    # log.info('return')
-    # return out
-
-
-# f = open('./conv2.txt')
-# text = f.read()
-# sent = sent_detector.tokenize(text.strip())
-# sent = [x.strip() for x in sent[:]]
-# print len(sent)
-# haikus = findPattern(sent, pattern)
-# haikus2 = findPattern(sent, [17])
-# print len(haikus)
-# print haikus[0:10]
-# print len(haikus2)
-# print haikus2[0:10]
-# print 'found: ', findPattern(
-    # ['za cava qawa sadafa gajasa rata paca gata'], [6, 3, 9])
-# ns = 0
-# out = []
-# haiku = 0
-# for i in sent:
-#     tokens = nltk.word_tokenize(i)
-#     ns = 0
-#     out = []
-#     for j in tokens:
-#         ns += max(nsyl(j))
-#         out.append(j)
-#         if ns > sylls:
-#             ns = 0
-#             out = []
-#             break
-#     if ns == sylls:
-#         haiku += 1
-#         print ' '.join(out)
-#     ns = 0
-#     out = []
-# print 'total', haiku
