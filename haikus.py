@@ -14,7 +14,7 @@ import sys
 
 logging.basicConfig(stream=sys.stdout)
 log = logging.getLogger("Syllables")
-log.setLevel(logging.INFO)
+log.setLevel(logging.DEBUG)
 
 sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
@@ -26,7 +26,7 @@ def nsyl(word):
         out = [len(list(y
         for y in x if isdigit(y[-1])))
             for x in d[word.lower()]]
-    except:
+    except KeyError:
         out = [0]
     finally:
         return out
@@ -42,20 +42,48 @@ def findPattern(sentences, pattern):
     out = []
     haiku = []
     for i in sentences:
+        log.debug('Processing %s', i)
         _pattern = pattern[:]
         tokens = nltk.word_tokenize(i)
-        sylls = map(lambda x: max(nsyl(x)), tokens)
+        # sylls = map(lambda x: max(nsyl(x)), tokens)
         ns = 0
-        maxS = _pattern.pop()
-        for j in xrange(len(sylls)):
-            ns += sylls[j]
-            if ns > maxS:
+        maxS = 0
+        for j in xrange(len(tokens)):
+            word= tokens[j]
+            ns += max(nsyl(word.lower()))
+            log.debug('Token %s %d/%d', word, ns, pattern[maxS])
+            if ns > pattern[maxS]:
+                log.debug('Overflow %s %d', word, ns)
+                ns = 0
+                maxS = 0
                 break
-            if ns == maxS:
-                if j != len(sylls) and len(_pattern) == 0:
-                    break
-                elif j == len(sylls):
-                    out.append(' '.join(i))
+            elif ns == pattern[maxS]:
+                log.debug('Pattern element matched %s %d', word, ns)
+                ns = 0
+                maxS += 1
+                if maxS == len(pattern):
+                    if j < len(tokens):
+                        log.debug('Pattern oveflow %s %d', word, ns)
+                        ns = 0
+                        maxS = 0
+                        break
+                    else:
+                        log.debug('Pattern fully matched %s %d', word, ns)
+                        out.append(' '.join(tokens))
+                        ns = 0
+                        maxS = 0
+                        break
+    return out
+
+        # for j in xrange(len(sylls)):
+        #     ns += sylls[j]
+        #     if ns > maxS:
+        #         break
+        #     if ns == maxS:
+        #         if j != len(sylls) and len(_pattern) == 0:
+        #             break
+        #         elif j == len(sylls):
+        #             out.append(' '.join(i))
         # for word in tokens:
     #         log.info('%s | %s | %d', word, ' '.join(haiku), ns)
     #         ns += max(nsyl(word))
@@ -81,7 +109,7 @@ def findPattern(sentences, pattern):
     #     ns = 0
     #     haiku = []
     # log.info('return')
-    return out
+    # return out
 
 
 # f = open('./conv2.txt')
