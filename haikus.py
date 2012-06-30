@@ -3,6 +3,7 @@ try:
     from curses.ascii import isdigit
 except:
     import re
+
     def isdigit(c):
         return re.match(r'[0-9]', c) is not None
 
@@ -40,16 +41,14 @@ pattern = [5, 7, 5]
 def findPattern(sentences, pattern):
     ns = 0
     out = []
-    haiku = []
     for i in sentences:
         log.debug('Processing %s', i)
-        _pattern = pattern[:]
         tokens = nltk.word_tokenize(i)
         # sylls = map(lambda x: max(nsyl(x)), tokens)
         ns = 0
         maxS = 0
         for j in xrange(len(tokens)):
-            word= tokens[j]
+            word = tokens[j]
             ns += max(nsyl(word.lower()))
             log.debug('Token %s %d/%d', word, ns, pattern[maxS])
             if ns > pattern[maxS]:
